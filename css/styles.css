@@ -172,6 +172,12 @@ a {
         transform: translate(-50%, -50%);
         opacity: 0.3;
         width: 40%;
+
+
+        @media (max-width: 650px) {
+            width: 80%;
+        }
+
     }
 
     &:nth-of-type(2) {
@@ -192,6 +198,11 @@ a {
         right: 0;
         opacity: 0.5;
         width: 35%;
+
+
+        @media (max-width: 650px) {
+            top: 0vw;
+        }
     }
 
 
@@ -245,6 +256,10 @@ a {
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 1300px) {
+        
+    }
+
     & h2 {
         color: black;
         text-align: center;
@@ -253,20 +268,57 @@ a {
         font-weight: 600;
         font-size: 3em;
         margin-top: 2em;
+
+
+        @media (max-width: 1300px) {
+            margin-bottom: 2em;
+            font-size: 2em;
+        }
+
+        @media (max-width: 650px) {
+            margin-bottom: 2em;
+            font-size: 2em;
+        }
+
     }
 
-    & div {
+    & .figures {
 
         display: flex;
         align-items: center;
         justify-content: center;
         width: 95%;
         gap: 1em;
+        scroll-snap-align: center;
+        &::-webkit-scrollbar {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: black;
+            border-radius: 10px;
+        }
 
-        & figure {
+
+        @media (max-width: 1300px) {
+            flex-direction: row;
+            width: 100%;
+            overflow: auto;
+            justify-content: flex-start;
+        }
+
+        & > figure {
 
             width: 100%;
-            height: 19em;
+            height: 20em;
+            scroll-snap-type: x mandatory;
+
+            @media (max-width: 1300px) {
+                height: 30em;
+                min-height: 30em;
+                min-width: 15em;
+                margin-top: 0!important;
+                
+            }
 
 
             &:nth-of-type(1) {
@@ -301,6 +353,12 @@ a {
         }
 
     } 
+
+    & .slider {
+        width: 300px;
+        text-align: center;
+        overflow: hidden;
+      }
 
   }
 
@@ -343,4 +401,14 @@ a {
 	border-radius: calc( var(--unit) / 5.86);
 	background-image: linear-gradient(rgba(0,0,0,0), #111), url(https://www.apple.com/v/iphone-xs/d/images/overview/screen_display_wallpaper_iphonexs_large.jpg);
 	z-index: 200;
+}
+
+
+
+
+.photos1 {
+    height: 100vh;
+    width: 100%;
+    margin-inline:0;
+    background-color: white;
 }
