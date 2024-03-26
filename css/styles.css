@@ -1,0 +1,346 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+    --background : black;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Main */
+
+
+body {
+    background-color: var(--background);
+    font-family: sans-serif;
+}
+
+p, h1, h2, h3, h4, a {
+    color: white;
+    font-family: Playfair Display;
+}
+
+h1 {
+    font-family: allura;
+    font-weight: lighter;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+ color: white;
+}
+
+  
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  section {
+    margin-inline: max(1.5rem, ((100% - 80rem) / 2));
+  }
+
+
+/* Navbar */
+
+/* nav styles */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+    box-shadow: 0 -70px 100px 0 white;
+    background-color: black;
+    opacity: 0.9;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    padding-left: 20px;
+  }
+  
+  .hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 7px;
+    background-color: white;
+    border-radius: 10px;
+
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+  }
+  
+  .nav__link {
+    position: fixed;
+    width: 100%;
+    top: 5rem;
+    left: 0;
+    transition: 1s;
+    background-color: black;
+    border: 1px solid white;
+    
+  }
+  
+  .nav__link a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    transition: 1s;
+    border:none;
+    position: relative;
+  }
+  
+  .nav__link a:hover {
+    border: none;
+    
+  }
+
+  .nav__link a::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    left: 50%;
+    bottom:0;
+    background-color: white;
+    transition: all ease-in-out .2s;
+  }
+  .nav__link a:hover::after{
+    width: 100%;
+    left: 0;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  @media screen and (min-width: 650px) {
+    .nav__link {
+      display: block;
+      position: static;
+      width: auto;
+      margin-right: 20px;
+      background: none;
+      border: none;
+    }
+  
+    .nav__link a {
+      display: inline-block;
+      padding: 15px 20px;
+      transition: 1s;
+      font-size: 1em;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  }
+
+
+  /* Mainimage */
+
+
+  .background {
+    position: absolute;
+    z-index: -1;
+
+    &:nth-of-type(1) {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+        width: 40%;
+    }
+
+    &:nth-of-type(2) {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5;
+        width: 35%;
+    }
+
+    &:nth-of-type(3) {
+        bottom: 1em;
+        left: -8em;
+    }
+
+    &:nth-of-type(4) {
+        top: -14vw;
+        right: 0;
+        opacity: 0.5;
+        width: 35%;
+    }
+
+
+  }
+
+
+
+  .mainimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5em;
+    height: 90vh;
+
+
+    & h1 {
+        font-size: 4em;
+    }
+
+    & h2 {
+        font-size: 2em;
+        font-weight: 900;
+    }
+
+    & p {
+        font-size: 1em;
+        border: 2px solid white;
+
+        padding: 0.5em 1em;
+        text-align: center;
+    }
+
+    & img {
+        width: 5em;
+    }
+
+
+  }
+
+
+  /* Phones */
+
+  .phones {
+    background-color: white;
+    width: 100%;
+    margin-inline: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & h2 {
+        color: black;
+        text-align: center;
+
+        font-family: allura;
+        font-weight: 600;
+        font-size: 3em;
+        margin-top: 2em;
+    }
+
+    & div {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        gap: 1em;
+
+        & figure {
+
+            width: 100%;
+            height: 19em;
+
+
+            &:nth-of-type(1) {
+                margin-top: 0;
+            }
+    
+            &:nth-of-type(2) {
+                margin-top: 4em;
+            }
+    
+            &:nth-of-type(3) {
+                margin-top: 8em;
+            }
+    
+            &:nth-of-type(4) {
+                margin-top: 12em;
+            }
+    
+            &:nth-of-type(5) {
+                margin-top: 8em;
+            }
+    
+            &:nth-of-type(6) {
+                margin-top: 4em;
+            }
+    
+            &:nth-of-type(7) {
+                margin-top: 0;
+            }
+    
+    
+        }
+
+    } 
+
+  }
+
+  .iphone, .ipad {
+	display: block;
+	color: #fff;
+	text-align: center;
+	font-family: 'SF Pro Display', Helvetica Neue, Arial, sans-serif;
+	letter-spacing: -.022em;
+	font-size: 2.5vmin;
+	text-shadow: 0 0 0.5em #000;
+	background-color: #000;
+	background-size: auto 200%, cover;
+	background-repeat: no-repeat, no-repeat;
+	border: solid #111;
+	margin-bottom: 2em;
+	position: relative;
+	box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
+	transition: all .1s linear, line-height 0s linear;
+	background-position: 50% 100%, center;
+	transform-origin: bottom center;
+
+	&:hover {
+		color: transparent;
+		text-shadow: 0 0 0em transparent;
+		background-position: 50% -100%, center center;
+		transition: all .15s linear, line-height 5s linear;
+		box-shadow: 0 0.5em 3em 0.25em rgba(0, 0, 0, 0.33), 0 0 0 1px #000 inset;
+		transform: scale(1.0025);
+		line-height: 0vmin;
+	}
+}
+
+.iphone {
+	--unit: calc(60vmin / 2.525);
+	width: var(--unit);
+	height: calc(2.15 * var(--unit));
+	line-height: calc(2.165 * var(--unit));
+	border-width: calc( var(--unit) / 15.625);
+	border-radius: calc( var(--unit) / 5.86);
+	background-image: linear-gradient(rgba(0,0,0,0), #111), url(https://www.apple.com/v/iphone-xs/d/images/overview/screen_display_wallpaper_iphonexs_large.jpg);
+	z-index: 200;
+}
