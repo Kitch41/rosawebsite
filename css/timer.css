@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+    --background : black;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Main */
+
+
+body {
+    background-color: var(--background);
+    font-family: sans-serif;
+}
+
+p, h1, h2, h3, h4, a {
+    color: white;
+    font-family: Playfair Display;
+}
+
+h1 {
+    font-family: allura;
+    font-weight: lighter;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+ color: white;
+}
+
+  
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  section {
+    margin-inline: max(1.5rem, ((100% - 80rem) / 2));
+  }
+
+
+/* Navbar */
+
+/* nav styles */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+    box-shadow: 0 -70px 100px 0 white;
+    background-color: black;
+    opacity: 0.9;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    padding-left: 20px;
+  }
+  
+  .hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 7px;
+    background-color: white;
+    border-radius: 10px;
+
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+  }
+  
+  .nav__link {
+    position: fixed;
+    width: 100%;
+    top: 5rem;
+    left: 0;
+    transition: 1s;
+    background-color: black;
+    border: 1px solid white;
+    
+  }
+  
+  .nav__link a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    transition: 1s;
+    border:none;
+    position: relative;
+  }
+  
+  .nav__link a:hover {
+    border: none;
+    
+  }
+
+  .nav__link a::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    left: 50%;
+    bottom:0;
+    background-color: white;
+    transition: all ease-in-out .2s;
+  }
+  .nav__link a:hover::after{
+    width: 100%;
+    left: 0;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  @media screen and (min-width: 650px) {
+    .nav__link {
+      display: block;
+      position: static;
+      width: auto;
+      margin-right: 20px;
+      background: none;
+      border: none;
+    }
+  
+    .nav__link a {
+      display: inline-block;
+      padding: 15px 20px;
+      transition: 1s;
+      font-size: 1em;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  }
+
+
+  /* Mainimage */
+
+
+  .background {
+    position: absolute;
+    z-index: -1;
+
+    &:nth-of-type(1) {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+        width: 40%;
+
+
+        @media (max-width: 650px) {
+            width: 80%;
+        }
+
+    }
+
+    &:nth-of-type(2) {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5;
+        width: 35%;
+    }
+
+    &:nth-of-type(3) {
+        bottom: 1em;
+        left: -8em;
+    }
+
+    &:nth-of-type(4) {
+        top: -14vw;
+        right: 0;
+        opacity: 0.5;
+        width: 35%;
+
+
+        @media (max-width: 650px) {
+            top: 0vw;
+        }
+    }
+
+
+    }
+
+
+    .timer-wrapper {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "timer1 timer2"
+          "timer3 timer4"; 
+
+          height: 90vh;
+          width: 100%;
+
+          align-items: center;
+          justify-items: center;
+
+          & .timer {
+            font-size: 2em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+           
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+        & .timer1 {
+            grid-area: timer1;
+        }
+        & .timer2 {
+            grid-area: timer2;
+        }
+        & .timer3 {
+            grid-area: timer3;
+        }
+        & .timer4 {
+            grid-area: timer4;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .timer-wrapper {
+            display: grid; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: repeat(4, 1fr); 
+            gap: 0px 0px; 
+            grid-template-areas: 
+              "timer1"
+              "timer2"
+              "timer3"
+              "timer4"; 
+    
+              height: auto;
+              min-height: 90vh;
+              width: 100%;
+    
+              align-items: center;
+              justify-items: center;
+    
+            & .timer {
+                font-size: 2em;
+                text-align: center;
+               
+                h2 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+
+
+            & .timer1 {
+                grid-area: timer1;
+            }
+            & .timer2 {
+                grid-area: timer2;
+            }
+            & .timer3 {
+                grid-area: timer3;
+            }
+            & .timer4 {
+                grid-area: timer4;
+            }
+        }    
+    }
+   
