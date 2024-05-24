@@ -9,7 +9,7 @@ const swiper = new Swiper(".swiper", {
     centeredSlides: false,
     effect: "coverflow",
     coverflowEffect: {
-      rotate: -5,
+      rotate: 10,
       slideShadows: true
     },
     autoplay: {
@@ -19,9 +19,6 @@ const swiper = new Swiper(".swiper", {
     pagination: {
         el: ".swiper-pagination",
       },
-    scrollbar: {
-      el: ".swiper-scrollbar"
-    },
     breakpoints: {
       0: {
         slidesPerView: 2,
