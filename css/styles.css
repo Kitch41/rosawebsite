@@ -11,7 +11,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    z-index: 2;
 }
 
 /* Main */
@@ -40,6 +39,13 @@ li {
  color: white;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s ease-in-out; /* Added smooth transition effect */
+  z-index: 200  ;
+}
   
 a {
     text-decoration: none;
@@ -94,14 +100,16 @@ a {
   }
   
  .nav__link {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    top: 5rem;
+    top: 4.9rem;
     left: 0;
     transition: 1s;
     background-color: black;
-    border: 1px solid white;
-    
+    border-bottom: 1px solid white;
+    z-index: 10!important;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
   }
 
   footer .nav__link {
@@ -124,37 +132,10 @@ a {
   
   .nav__link a:hover {
     border: none;
-    
-  }
-
-  .nav__link a::after{
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 2px;
-    left: 50%;
-    bottom:0;
-    background-color: white;
-    transition: all ease-in-out .2s;
-  }
-
-  .footer .nav__link a::after{
-    content: '';
-    width: 0px;
-    height: 2px;
-    left: 50%;
-    bottom:0;
-    background-color: white;
-    transition: all ease-in-out .2s;
-  }
-
-  .nav__link a:hover::after{
-    width: 100%;
-    left: 0;
   }
   
   .hide {
-    display: none;
+    opacity: 0;
   }
 
   @media screen and (min-width: 650px) {
@@ -179,6 +160,30 @@ a {
     }
   }
 
+  .buttoneffect {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    transition: 1s;
+    border:none;
+    position: relative;
+  }
+
+  .buttoneffect::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    left: 50%;
+    bottom:0;
+    background-color: white;
+    transition: all ease-in-out .2s;
+  }
+
+  .buttoneffect:hover::after{
+    width: 100%;
+    left: 0;
+  }
 
   /* Mainimage */
 
@@ -238,6 +243,7 @@ a {
     flex-direction: column;
     gap: 5em;
     height: 90vh;
+    margin-top: 100px;
 
 
     & h1 {
@@ -430,9 +436,20 @@ a {
 	border-width: calc( var(--unit) / 15.625);
 	border-radius: calc( var(--unit) / 5.86);
 	background-image: linear-gradient(rgba(0,0,0,0), #111), url(https://www.apple.com/v/iphone-xs/d/images/overview/screen_display_wallpaper_iphonexs_large.jpg);
-	z-index: 200;
+	z-index: 2;
 }
 
+.iphone:nth-of-type(3n) {
+  background-image: linear-gradient(rgba(0,0,0,0), #111), url(../images/concert1.png);
+}
+
+.iphone:nth-of-type(3n + 1) {
+  background-image: linear-gradient(rgba(0,0,0,0), #111), url(../images/concert2.png);
+}
+
+.iphone:nth-of-type(3n + 2) {
+  background-image: linear-gradient(rgba(0,0,0,0), #111), url(../images/concert3.png);
+}
 
 
 
@@ -447,15 +464,29 @@ a {
     align-items: center;
 
 
-    & section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    & section.text {
+        display: grid;
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 25% 50% 25%; 
+        grid-template-rows: 1fr; 
+        gap: 10px 10px; 
+        grid-template-areas: 
+        "text1 title text2"; 
+        justify-items: center; 
+        align-items: center; 
         gap: 3em;
-        margin: 3em 0;
+        margin: 5em 0;
 
         @media (max-width: 800px) {
-            flex-direction: column;
+          display: grid;
+          grid-auto-rows: 1fr; 
+          grid-template-columns: 1fr; 
+          grid-template-rows: 1fr 1fr 1fr; 
+          gap: 10px 10px; 
+          grid-template-areas: 
+          "title"
+          "text1"
+          "text2";
         }
         
 
@@ -469,21 +500,21 @@ a {
             }
 
             &:nth-of-type(1) {
-                order: 1;
+                grid-area: text1;
 
-                @media (max-width: 800px) {
-                    order: 2;
-                }
+
             }
 
             &:nth-of-type(2) {
-                order: 3;
+                grid-area: text2;
             }
         }
 
         & h2 {
-            margin-top: -3em;
-            order: 2;
+            margin-top: -1em;
+            grid-area: title;
+            font-family: allura;
+            font-size: 3rem;
             
             @media (max-width: 800px) {
                 margin-top: 0;
@@ -560,4 +591,19 @@ a {
         position: relative;
         z-index: 2;
       }
+}
+
+.seeMore {
+  font-size: 1.5em!important;
+}
+
+.pop-text {
+  opacity: 0;
+  transform: scale(0.5); /* Initial scale */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.popped {
+  opacity: 1;
+  transform: scale(1); /* Final scale */
 }

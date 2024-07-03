@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>MyStateofArt</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="icon" href="./images/vlinder.png" type="image/png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
@@ -15,7 +16,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="header">
       <nav class="nav">
         <a href="/" class="logo">MyStateofArt</a>
 
@@ -25,10 +26,10 @@
           <span class="line"></span>
         </div>
 
-        <div class="nav__link hide">
-          <a href="#">Gallery</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+        <div class="nav__link">
+          <a href="#" class="buttoneffect">Gallery</a>
+          <a href="#" class="buttoneffect">About</a>
+          <a href="#" class="buttoneffect">Contact</a>
         </div>
       </nav>
     </header>
@@ -42,16 +43,16 @@
         
         
         <section class="mainimage">
-            <h1>Rosa Hoorn</h1>
-            <h2>MyStateofArt</h2>
-            <p>we’ve got nothing to lose<br>
+            <h1 class="pop-text" data-pop="1">Rosa Hoorn</h1>
+            <h2 class="pop-text" data-pop="2">MyStateofArt</h2>
+            <p class="pop-text" data-pop="1">we’ve got nothing to lose<br>
                 lets connect</p>
                 <img src="./images/ster.png">
         </section>
 
         <section class="phones">
 
-            <h2>Multiple styles, endless possibility’s</h2>
+            <h2 class="pop-text" data-pop="1.5">Multiple styles, endless possibility’s</h2>
 
             <div class="figures">
                 <figure class='iphone'></figure>
@@ -74,73 +75,58 @@
         </section>
 
         <section class="photos photos1">
-            <section>
-                <h2>Light, camera..<br>CONCERT</h2>
-                <p>Je  relatie met de lichttechnicus is zeer ​belangrijk. <br>Wanneer je het lichtplan van tevoren ​bespreekt zullen je fotos 10x beter zijn.</p>
-                <p>Qua positie en en angle is alles mooier ​wanneer het van voor en achteren belicht ​is.</p>
+            <section class="text">
+                <h2 class="pop-text" data-pop="1.5">Light, camera.. CONCERT!</h2>
+                <p class="pop-text" data-pop="1">Je  relatie met de lichttechnicus is zeer ​belangrijk. <br>Wanneer je het lichtplan van tevoren ​bespreekt zullen je fotos 10x beter zijn.</p>
+                <p class="pop-text" data-pop="1">Qua positie en en angle is alles mooier ​wanneer het van voor en achteren belicht ​is.</p>
             </section>
 
             <article class="swiperarticle">
-
                 <section class="sectionWrapper">
-              
                   <section class="swiper">
-              
-              
                     <div class="swiper-wrapper">
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert1.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert2.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert3.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert4.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert5.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
+                        </div>
+                      </figure>
+                      <figure class="swiper-slide">
+                        <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+                          <img src="./images/concert5.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                        </div>
+                      </figure>
+                      <figure class="swiper-slide">
+                        <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+                          <img src="./images/concert5.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
                         </div>
                       </figure>
                     </div>
                     <div class="swiper-pagination"></div>
-              
                   </section>
+
+                  <div>
+                    <a href="#linktoconcert" class="seeMore buttoneffect pop-text" data-pop="1">More Concert Photo's</a>
+                  </div>
               
                 </section>
               
@@ -149,74 +135,60 @@
         </section>
 
         <section class="photos photos2">
-            <section>
-                <h2>The sun is shining...<br>and so are you</h2>
-                <p>Over licht gesproken is zonlicht een andere<br>hele goede vriend van mij.<br>Golden hour is de beste tijd om te shooten.<br>en je klant zal er stralend en glowy uitzien.</p>
+            <section class="text">
+                <h2 class="pop-text" data-pop="1.5">The sun is shining... and so are you!</h2>
+                <p class="pop-text" data-pop="1">Over licht gesproken is zonlicht een andere hele goede vriend van mij.</p>
+                <p class="pop-text" data-pop="1">Golden hour is de beste tijd om te shooten. En je klant zal er stralend en glowy uitzien.</p>
             </section>
 
             <article class="swiperarticle">
-
                 <section class="sectionWrapper">
-              
                   <section class="swiper">
-              
-              
                     <div class="swiper-wrapper">
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert1.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert2.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert3.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert4.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
                           <img src="./images/concert5.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
                         </div>
-    
                       </figure>
-              
+                      <figure class="swiper-slide">
+                        <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+                          <img src="./images/concert5.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                        </div>
+                      </figure>
+                      <figure class="swiper-slide">
+                        <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+                          <img src="./images/concert5.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                        </div>
+                      </figure>
                     </div>
                     <div class="swiper-pagination"></div>
               
                   </section>
+
+                  <div>
+                    <a href="#linktoportrait" class="seeMore buttoneffect pop-text" data-pop="1">More Regular Photo's</a>
+                  </div>
+                  
               
                 </section>
               
@@ -224,79 +196,69 @@
         </section>
 
         <section class="photos videos">
-            <section>
-                <h2>Light, camera..<br>CONCERT</h2>
-                <p>Je  relatie met de lichttechnicus is zeer ​belangrijk. <br>Wanneer je het lichtplan van tevoren ​bespreekt zullen je fotos 10x beter zijn.</p>
-                <p>Qua positie en en angle is alles mooier ​wanneer het van voor en achteren belicht ​is.</p>
+            <section class="text">
+                <h2 class="pop-text" data-pop="1.5">Vous les VIDEO!</h2>
+                <p class="pop-text" data-pop="1">Korte reels en video’s maken zijn ook een ​kwaliteit van mij geworden.</p>
+                <p class="pop-text" data-pop="1">Vaak ben ik aanwezig bij concerten en ​clubavonden georganiseerd door Bitterzoet.</p>
             </section>
 
             <article class="swiperarticle">
-
                 <section class="sectionWrapper">
-              
                   <section class="swiper">
-              
-              
                     <div class="swiper-wrapper">
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
-                          <img src="./images/concert1.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
+                          <video controls alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                            <source src="https://portfolio-tijdelijk.my.canva.site/content-creation/videos/15f3a3ad11d0068d76f62b2ef2b72c5e.mp4" type="video/mp4">
+                          </video>
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
-                          <img src="./images/concert2.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
+                          <video controls alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                            <source src="https://portfolio-tijdelijk.my.canva.site/content-creation/videos/3bd7bee290a199e2c8e8b8745bdef2c7.mp4" type="video/mp4">
+                          </video>
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
-                          <img src="./images/concert3.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
+                          <video controls alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                            <source src="https://portfolio-tijdelijk.my.canva.site/content-creation/videos/135933fbf1d076d81fcd1c37fa216076.mp4" type="video/mp4">
+                          </video>
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
-                          <img src="./images/concert4.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
+                          <video controls alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                            <source src="https://portfolio-tijdelijk.my.canva.site/content-creation/videos/15f3a3ad11d0068d76f62b2ef2b72c5e.mp4" type="video/mp4">
+                          </video>
                         </div>
-              
                       </figure>
-              
                       <figure class="swiper-slide">
-              
                         <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-              
-                          <img src="./images/concert5.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-              
+                          <video controls alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                            <source src="https://portfolio-tijdelijk.my.canva.site/content-creation/videos/3bd7bee290a199e2c8e8b8745bdef2c7.mp4" type="video/mp4">
+                          </video>                        
                         </div>
-    
                       </figure>
-              
+                      <figure class="swiper-slide">
+                        <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+                          <video controls alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                            <source src="https://portfolio-tijdelijk.my.canva.site/content-creation/videos/135933fbf1d076d81fcd1c37fa216076.mp4" type="video/mp4">
+                          </video>                        
+                        </div>
+                      </figure>
+                      <figure class="swiper-slide">
+                        <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+                          <video controls alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+                            <source src="https://portfolio-tijdelijk.my.canva.site/content-creation/videos/15f3a3ad11d0068d76f62b2ef2b72c5e.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </figure>
                     </div>
-        
                     <div class="swiper-pagination"></div>
-              
                   </section>
-              
                 </section>
-              
               </article>
         </section>
 
@@ -308,13 +270,13 @@
           <div class="footer-logo">
             MyStateofArt
           </div>
-          <div class="footer-links">
-            <ul class="footer-menu nav__link">
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+          <nav class="footer-links">
+            <ul class="footer-menu">
+              <li><a href="#" class="buttoneffect">Gallery</a></li>
+              <li><a href="#" class="buttoneffect">About</a></li>
+              <li><a href="#" class="buttoneffect">Contact</a></li>
             </ul>
-          </div>
+          </nav>
           <div class="footer-social">
             <ul class="social-icons">
               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -325,7 +287,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2023 MyStateofArt. All rights reserved.</p>
+          <p>&copy; <span data-replace-year="year">2024</span> MyStateofArt. All rights reserved.</p>
           <p> Made possible by Kitchdesign </p>
         </div>
       </div>
